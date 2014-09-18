@@ -9,7 +9,7 @@ FAQ
 
 ### How to compile this program ###
 
-I will write a detailed instruction later.
+I will provide a detailed instruction later.
 Currently, the server can run on "Ubuntu 8.04.4 LTS".
 
 License
@@ -27,4 +27,3 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
-

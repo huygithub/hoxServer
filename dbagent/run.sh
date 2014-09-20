@@ -61,8 +61,9 @@ fi
 kill_app
 
 echo "Starting a new instance of [$APP]..."
-LD_LIBRARY_PATH=../lib ./dbagent  -l logs/ -b 192.168.206.141 -p 7001 &
+#LD_LIBRARY_PATH=../lib ./dbagent  -l logs/ -b 192.168.206.141 -p 7001 &
 #LD_LIBRARY_PATH=../lib ./dbagent  -l logs/ -p 7001 &
+./$APP -l logs/ -p 7001 &
 
 ############# END OF FILE #####################################################
 

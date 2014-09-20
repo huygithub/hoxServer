@@ -85,7 +85,7 @@ open_log_file( const std::string& sLogDir )
 
     if (( fd = open( sLogDir.c_str(), O_CREAT | O_WRONLY | O_APPEND, 0644 ) ) < 0 )
     {
-        err_sys_quit( s_errfd, "ERROR: can't open error log file: open" );
+        err_sys_quit( s_errfd, "ERROR: can't open error log file: [%s]", sLogDir.c_str() );
     }
 
     return fd;
@@ -642,7 +642,7 @@ static void open_log_files( void )
     /* Open and write pid to pid file */
     sFilename = std::string(s_logdir) + PID_FILE;
     if (( fd = open( sFilename.c_str(), O_CREAT | O_WRONLY | O_TRUNC, 0644 ) ) < 0 )
-        err_sys_quit( s_errfd, "ERROR: can't open pid file: open" );
+        err_sys_quit( s_errfd, "ERROR: can't open pid file: [%s]", sFilename.c_str() );
     sprintf( str, "%d\n", ( int )getpid() );
     if ( write( fd, str, strlen( str ) ) != (int) strlen( str ) )
         err_sys_quit( s_errfd, "ERROR: can't write to pid file: write" );

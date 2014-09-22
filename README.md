@@ -12,6 +12,28 @@ FAQ
 I will provide a detailed instruction later.
 Currently, the server can run on "Ubuntu 8.04.4 LTS".
 
+Here are the basic steps to compile the server from scratch on "Ubuntu Server 14.04.1 (64-bit) LTS"
+- Install the required packages:
+    - $ sudo apt-get install cmake build-essential
+    - $ sudo apt-get install libboost-dev libsqlite3-dev libst-dev libconfig++-dev
+- Build 'dbagent':
+    - $ cd hoxServer/dbagent
+    - $ mkdir build && cd build
+    - $ cmake ..
+    - $ make
+- Run 'dbagent':
+    - $ mkdir logs && mkdir -p server/logs
+    - $ ../run.sh
+- Build 'server'
+    - $ cd hoxServer/server
+    - $ mkdir build && cd build
+    - $ cmake ..
+    - $ make
+- Run 'server':
+    - $ mkdir logs
+    - $ ln -s ../server.cfg
+    - $ ../run.sh
+
 License
 -------
 

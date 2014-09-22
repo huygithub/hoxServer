@@ -9,9 +9,6 @@ FAQ
 
 ### How to compile this program ###
 
-I will provide a detailed instruction later.
-Currently, the server can run on "Ubuntu 8.04.4 LTS".
-
 Here are the basic steps to compile the server from scratch on "Ubuntu Server 14.04.1 (64-bit) LTS"
 - Install the required packages:
     - $ sudo apt-get install cmake build-essential

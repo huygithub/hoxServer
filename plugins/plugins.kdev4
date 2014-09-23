@@ -1,0 +1,4 @@
+[Project]
+Name=plugins
+Manager=KDevCMakeManager
+VersionControl=
